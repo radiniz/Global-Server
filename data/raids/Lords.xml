@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+  <!--Announcements-->
+  <announce delay="1000" type="Event" message="Cavaleiro Sombrio e sua tropa estao prestes a atacar ao norte de Thais." />
+  <announce delay="7000" type="Event" message="Cavaleiro Sombrio e sua tropa invadiram ao norte de Thais ajudem Thais a se livrar deles!!" />
+  <!--Single Spawns-->
+  <singlespawn delay="10000" name="Cavaleiro Sombrio" x="32359" y="32127" z="7" />
+  <!--Area Spawns-->
+  <areaspawn delay="20000" fromx="32317" fromy="32131" fromz="7" tox="32425" toy="32104" toz="7">
+    <monster name="Lord of Water" amount="16" />
+    <monster name="Lord of Fire" amount="16" />
+    <monster name="Lord of Earth" amount="16" />
+    <monster name="Lord of Darkness" amount="16" />
+  </areaspawn>
+</raid>

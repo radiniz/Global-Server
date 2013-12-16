@@ -1,0 +1,8 @@
+function onSay(cid, words, param)
+if isPlayer(getPlayerByName(name)) == TRUE then
+            vip.addVipByAccount(getPlayerAccount(getPlayerByName(name)) ,vip.getDays(id))
+
+doPlayerRemoveItem(cid, 6527, 5)
+doPlayerSendCancel(cid, "Added 15 Vip Days.")
+return doPlayerAddVipByAccount(cid, 15)
+end
