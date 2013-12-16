@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Zruglock" nameDescription="a zruglock" race="venom" experience="120" speed="198" manacost="320">
+	<health now="705" max="705"/>
+	<look type="76" corpse="6018"/>
+	<targetchange interval="5000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="15"/>
+	</flags>
+      <script>
+      <event name="zruglocktp"/>
+      </script>
+	<attacks>
+		<attack name="melee" interval="2000" skill="21" attack="19" poison="25"/>
+		<attack name="poison" interval="1000" chance="12" range="7" radius="4" min="-15" max="-35">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="speed" interval="1000" chance="13" range="7" speedchange="-700" duration="25000">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="6" defense="15"/>
+	<elements>
+		<element earthPercent="20"/>
+		<element firePercent="-10"/>
+	</elements>
+	<voices interval="100" chance="10">
+		<voice sentence="Ha! ha! ha! ha!" yell="1"/>
+		<voice sentence="I will back!!" yell="1"/>
+		<voice sentence="Come and die!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="3976" countmax="10" chance="50000"/><!-- worm -->
+		<item id="2148" countmax="57" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="87" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="37" chance="100000"/><!-- gold coin -->
+		<item id="2667" countmax="5" chance="90000"/><!-- fish -->
+		<item id="8306" chance="100000"/><!-- fishing rod -->
+		<item id="2580" chance="100000"/><!-- fishing rod -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+				<item id="2643" chance="20000"/><!-- leather boots -->
+				<item id="2050" chance="20000"/><!-- torch -->
+		            <item id="2148" countmax="37" chance="100000"/><!-- gold coin -->
+		            <item id="2148" countmax="87" chance="100000"/><!-- gold coin -->
+		            <item id="2148" countmax="37" chance="100000"/><!-- gold coin -->
+			</inside>
+		</item>
+	</loot>
+</monster>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<monster name="Sea Crab" namedescription="a sea crab" race="blood" experience="30" speed="140" manacost="305">
+	<health now="65" max="65"/>
+	<look type="112" corpse="6039"/>
+	<targetchange interval="2000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="15"/>
+	</attacks>
+	<defenses armor="5" defense="10"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element icePercent="40"/>
+		<element firePercent="-10"/>
+		<element energyPercent="-5"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="skrack! skrack!"/>
+		<voice sentence="skrrrkrk."/>
+	</voices>
+	<loot>
+		<item id="3976" countmax="4" chance="50000"/><!-- worm -->
+		<item id="2671" countmax="2" chance="8888"/><!-- ham -->
+		<item id="2240" countmax="1" chance="10000"/><!-- fish -->
+		<item id="6125" countmax="1" chance="6666"/><!-- fish -->
+		<item id="2667" countmax="2" chance="15000"/><!-- fish -->
+		<item id="3976" countmax="2" chance="50000"/><!-- worm -->
+	</loot>
+</monster>

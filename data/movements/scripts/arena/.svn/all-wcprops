@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/data/movements/scripts/arena
+END
+didarenalevel.lua
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/8/trunk/data/movements/scripts/arena/didarenalevel.lua
+END
+arenaroom.lua
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/8/trunk/data/movements/scripts/arena/arenaroom.lua
+END
+leavearena.lua
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/8/trunk/data/movements/scripts/arena/leavearena.lua
+END
+arenagoblet.lua
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/8/trunk/data/movements/scripts/arena/arenagoblet.lua
+END

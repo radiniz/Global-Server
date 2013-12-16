@@ -1,0 +1,11 @@
+
+
+ Esto se agrega en monsters.xml
+
+
+
+        <!-- 9.X mounted special edition Zelda by Amy Azzkaban-->
+        <monster name="Hero of Time Green" file="9.X mounted special edition Zelda/Hero of Time Green.xml"/>
+        <monster name="Hero of Time Red" file="9.X mounted special edition Zelda/Hero of Time Red.xml"/>
+        <monster name="Hero of Time Blue" file="9.X mounted special edition Zelda/Hero of Time Blue.xml"/>
+        <monster name="Hero of Time Black" file="9.X mounted special edition Zelda/Hero of Time Black.xml"/>

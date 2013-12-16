@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Thief" nameDescription="a thief." race="blood" experience="50" speed="160" manacost="355">
+	<health now="95" max="95"/>
+	<look type="128" head="20" body="76" legs="58" feet="97" addons="0" corpse="6080"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="20"/>
+		<attack name="physical" interval="1000" chance="15" range="7" min="-3" max="-7">
+			<attribute key="shootEffect" value="smallstone"/>
+		</attack>
+	</attacks>
+	<defenses armor="12" defense="14"/>
+	<elements>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="7"/>
+		<element deathPercent="-7"/>
+		<element physicalPercent="-6"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Money or die!"/>
+		<voice sentence="Give me everything!"/>
+		<voice sentence="Come to me..."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="15" chance="100000"/>
+		<item id="2464" chance="2467"/>
+		<item id="1294" countmax="6" chance="10000"/>
+		<item id="2459" chance="3000"/>
+		<item id="2376" chance="5000"/> 
+		<item id="1987" chance="100000">
+		<item id="8309" countmax="6" chance="6000"/><!-- nail -->
+			<inside>
+				<item id="2666" countmax="1" chance="10000"/> 
+				<item id="2010" chance="10000"/> 
+				<item id="2404" chance="10000"/> 
+			</inside>
+		</item>
+	</loot>
+</monster>

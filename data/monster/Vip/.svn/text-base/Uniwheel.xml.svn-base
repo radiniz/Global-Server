@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Inoperative Uniwheel" nameDescription="Inoperative Uniwheel" race="blood" experience="10" speed="120" manacost="205">
+	<health now="15" max="15"/>
+	<look type="389" corpse="0"/>
+	<targetchange interval="2000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="0" defense="1"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element energyPercent="22"/>
+		<element firePercent="-10"/>
+		<element icePercent="-10"/>
+	</elements>
+</monster>

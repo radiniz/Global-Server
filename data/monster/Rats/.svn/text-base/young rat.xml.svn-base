@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Young Rat" nameDescription="a young rat" race="blood" experience="3" speed="124" manacost="200">
+	<health now="10" max="10"/>
+	<look type="21" corpse="5964"/>
+	<targetchange interval="2000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="0"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="9"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="5"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="5" attack="7"/>
+	</attacks>
+	<defenses armor="1" defense="2"/>
+	<elements>
+		<element earthPercent="12"/>
+		<element holyPercent="20"/>
+		<element icePercent="-6"/>
+		<element deathPercent="-10"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Piiiii!"/>
+	</voices>
+	<loot>
+		<item id="2696" chance="20000"/><!-- cheese -->
+	</loot>
+</monster>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Dark Assassin" nameDescription="a amazone dark assassin" race="blood" experience="180" speed="190" manacost="450">
+	<health now="280" max="280"/>
+	<look type="156" head="114" body="114" legs="95" feet="114" corpse="6081" addons="3" />
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+		<attacks>
+		<attack name="melee" interval="1500" skill="45" attack="50"/>
+
+	</attacks>
+	<defenses armor="14" defense="10">
+		<defense name="invisible" interval="1000" chance="25" duration="9000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+                <defense name="speed" interval="1000" chance="15" speedchange="290" duration="6000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+
+	<elements>
+		<element icePercent="-7"/>
+		<element firePercent="-7"/>
+		<element holyPercent="-7"/>
+		<element deathPercent="-7"/>
+		<element physicalPercent="-7"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Shhhh...."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="30" chance="100000"/><!-- gold coin -->
+                <item id="2148" countmax="16" chance="100000"/><!-- gold coin -->
+		<item id="2457" chance="2333"/><!-- steel helmet -->
+                <item id="2389" countmax="2" chance="8000"/><!-- spear -->
+                <item id="2654" chance="6000"/><!-- cape -->
+                <item id="2237" chance="9000"/><!-- cape -->
+                <item id="7618" chance="3200"/><!-- health potion -->
+                <item id="7618" chance="3200"/><!-- health potion -->
+		<item id="1987" chance="100000"><!-- bag -->               
+			<inside>
+				<item id="2674" countmax="4" chance="10000"/><!-- red apple -->
+				<item id="2666" countmax="4" chance="20000"/><!-- meat -->
+				<item id="2147" countmax="2" chance="2500"/><!-- small ruby -->
+				<item id="2145" countmax="2" chance="2500"/><!-- small diamond -->
+				<item id="8865" chance="800"/><!-- dark lords cape -->
+				<item id="7618" chance="3200"/><!-- health potion -->
+			</inside>
+		</item>
+	</loot>
+</monster>

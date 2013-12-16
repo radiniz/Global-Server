@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Furywizard" nameDescription="a amazone Furywizard" race="blood" experience="335" speed="170" manacost="0">
+	<health now="510" max="510"/>
+	<look type="149" head="2" body="75" legs="77" feet="115" corpse="6081" addons="3" />
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="30"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="18" attack="18"/>
+		<attack name="fire" interval="1000" chance="20" range="7" min="-30" max="-105">
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+                <attack name="physical" interval="1000" chance="35" range="7" min="-55" max="-125">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+
+		<attack name="firefield" interval="1000" chance="50" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+                	<attack name="physical" interval="1000" chance="12" range="7" min="-60" max="-80">
+			<attribute key="shootEffect" value="suddendeath"/>
+		</attack>
+	</attacks>
+	<defenses armor="8" defense="12"/>
+	<elements>
+		<element energyPercent="100"/>
+		<element earthPercent="30"/>
+		<element deathPercent="-5"/>
+		<element physicalPercent="-14"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HIHIHIHHI"/>
+		<voice sentence="herba asspakus!"/>
+                <voice sentence="mmmm, hihihiihi!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="20" chance="100000"/><!-- gold coin -->
+		<item id="2129" chance="10000"/><!-- wolf tooth chain -->
+		<item id="2185" chance="833"/><!-- necrotic rod -->
+		<item id="7457" chance="3300"/><!-- leather boots -->
+		<item id="2651" chance="5000"/><!-- coat -->
+		<item id="2677" countmax="30" chance="1333"/><!-- blueberrry -->
+                <item id="5880" countmax="2" chance="1633"/><!-- fern -->
+		<item id="7343" chance="100000"><!-- bag -->
+			<inside>
+				<item id="2405" chance="5000"/><!-- sickle -->
+				<item id="2185" chance="1500"/><!-- Rod undercos -->
+				<item id="2662" chance="2500"/><!-- magician hat -->
+				<item id="2324" chance="10000"/><!-- broom -->
+				<item id="2654" chance="3333"/><!-- cape -->
+                                <item id="2468" chance="3333"/><!-- cape -->
+				<item id="2418" chance="1000"/><!-- golden sickle -->
+				<item id="8865" chance="1200"/><!-- garlic necklace -->
+				<item id="2801" countmax="4" chance="1333"/><!-- fern -->
+			</inside>
+		</item>
+	</loot>
+</monster>

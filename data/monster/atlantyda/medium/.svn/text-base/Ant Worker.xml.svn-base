@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ant Worker" nameDescription="a ant worker" race="blood" experience="65" speed="176" manacost="305">
+	<health now="79" max="79"/>
+      <look type="346" corpse="8593"/>
+	<targetchange interval="2000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+      	<elements>
+		<element earthPercent="100"/>
+		<element energyPercent="5"/>
+		<element firePercent="-5"/>
+		<element icePercent="-5"/>
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" skill="18" attack="26"/>
+            <attack name="poison" interval="1000" chance="12" range="1" radius="1" target="1" min="-2" max="-6">
+            <attribute key="areaEffect" value="poison"/>
+            </attack>
+	</attacks>
+	<defenses armor="8" defense="11"/>
+	<loot>
+		<item id="2148" countmax="10" chance="100000"/>
+		<item id="3976" countmax="3" chance="50000"/>
+		<item id="2148" countmax="4" chance="100000"/>
+		<item id="2480" chance="3500"/>
+		<item id="2530" chance="2513"/>
+		<item id="1987" chance="100000">
+			<inside>
+				<item id="2666" countmax="2" chance="20000"/>
+				<item id="2671" countmax="2" chance="20000"/>
+				<item id="2398" chance="3333"/>
+				<item id="2376" chance="10000"/>
+				<item id="2439" chance="3000"/>				
+				<item id="2412" chance="2000"/>
+			</inside>
+		</item>
+	</loot>
+</monster>

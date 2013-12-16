@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Swarm of Young Wasps" nameDescription="a swarm of young wasps" race="undead" experience="12" speed="160" manacost="280">
+	<health now="22" max="22"/>
+	<look type="349" corpse="0"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1500" skill="8" attack="10" poison="1"/>
+	</attacks>
+	<defenses armor="4" defense="5"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element firePercent="-10"/>
+	</elements>
+	<voices interval="5000" chance="100">
+		<voice sentence="Bss... bss... bzz..."/>
+	</voices>
+	<loot>
+	</loot>
+</monster>

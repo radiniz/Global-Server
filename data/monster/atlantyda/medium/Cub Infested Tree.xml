@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cub Infested Tree" nameDescription="a cub infested tree" race="undead" experience="80" speed="110" manacost="355">
+	<health now="125" max="125"/>
+	<look type="310" corpse="9867"/>
+	<targetchange interval="3000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="20"/>
+		<attack name="physical" interval="1000" chance="15" range="7" min="-3" max="-7">
+			<attribute key="shootEffect" value="smallstone"/>
+		</attack>
+		<attack name="terra strike" interval="2000" chance="22" min="-1" max="-12"/> 
+		<attack name="stone shower" interval="1000" chance="24" min="-1" max="-8"/>
+	</attacks>
+	<defenses armor="12" defense="14"/>
+	<elements>
+		<element earthPercent="95"/>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="7"/>
+		<element deathPercent="-7"/>
+		<element physicalPercent="-6"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="trrrrk!"/>
+		<voice sentence="trkt trkt!"/>
+		<voice sentence="Wwwoooo!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="15" chance="100000"/>
+		<item id="2464" chance="2467"/>
+		<item id="1294" countmax="6" chance="10000"/>
+		<item id="2459" chance="3000"/>
+		<item id="2376" chance="5000"/> 
+		<item id="5901" countmax="3" chance="9000"/>
+	</loot>
+</monster>

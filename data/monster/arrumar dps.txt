@@ -1,0 +1,14 @@
+	<monster name="Boreth" file="Bosses/Boreth.xml"/>
+	<monster name="Lersatio" file="Bosses/Lersatio.xml"/>
+	<monster name="Marziel" file="Bosses/Marziel.xml"/>
+	<monster name="Arthei" file="Bosses/Arthei.xml"/>
+
+
+	<monster name="Arachir the ancient one" file="Vip/Arachir the ancient one.xml"/>
+	<monster name="empe" file="empe.xml"/>
+	<monster name="pre1" file="pre1.xml"/>
+	<monster name="pre2" file="pre2.xml"/>
+	<monster name="guard" file="guard.xml"/>
+	<monster name="emperium1" file="emperium1.xml"/>
+	<monster name="emperium2" file="emperium2.xml"/>
+	<monster name="emperium" file="emperium.xml"/>

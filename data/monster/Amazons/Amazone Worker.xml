@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Worker" nameDescription="a amazone worker" race="blood" experience="65" speed="130" manacost="450">
+	<health now="150" max="150"/>
+	<look type="142" head="116" body="2" legs="115" feet="114" corpse="6081" />
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+		<attacks>
+		<attack name="melee" interval="1500" skill="25" attack="20"/>
+	</attacks>
+	<defenses armor="15" defense="20"/>
+	<elements>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="7"/>
+		<element deathPercent="7"/>
+		<element physicalPercent="10"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Ehmm..."/>
+		<voice sentence="will be mine!"/>
+		<voice sentence="work, work, work..."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="16" chance="100000"/><!-- gold coin -->
+		<item id="2464" chance="8000"/><!-- chain armor -->
+		<item id="2557" chance="2200"/><!-- hammer -->
+                <item id="2050" chance="5200"/><!-- torch -->
+                <item id="2398" chance="4200"/><!-- mace -->
+		<item id="2558" chance="1000"/><!-- saw -->
+		<item id="2677" countmax="25" chance="9993"/><!-- blueberry -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+                             <item id="2148" countmax="12" chance="100000"/><!-- gold coin -->
+		             <item id="7618" chance="3000"/><!-- health potion -->
+			</inside>
+		</item>
+	</loot>
+</monster>

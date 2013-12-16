@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Chela" nameDescription="a chela" race="venom" experience="15" speed="100" manacost="0">
+	<health now="20" max="20"/>
+	<look type="350" corpse="5990"/>
+	<targetchange interval="60000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag staticattack="90"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="10"/>
+	</attacks>
+	<defenses armor="10" defense="7"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element energyPercent="10"/>
+		<element icePercent="10"/>
+		<element physicalPercent="7"/>
+		<element firePercent="-20"/>
+	</elements>
+	<loot>
+		<item id="3976" countmax="5" chance="50000"/><!-- worm -->
+	</loot>
+</monster>

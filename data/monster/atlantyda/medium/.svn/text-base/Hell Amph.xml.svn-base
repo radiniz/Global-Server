@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Hell Amph" nameDescription="a hell amph" experience="100" speed="180" race="blood" manacost="0">
+	<health now="160" max="160"/>
+	<strategy attack="100" defense="0"/>
+	<targetchange speed="0" chance="8"/>
+	<look type="322" corpse="9923"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="2000" min="-10" max="-35" range="1"/>
+		<attack name="fireball" interval="2000" chance="24" min="-15" max="-25"/>
+		<attack name="soulfire" interval="2000" chance="14"/> 
+	</attacks>	
+	<defenses armor="13" defense="13">
+		<defense name="healing" interval="1000" chance="15" min="10" max="40">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="5"/>
+		<element energyPercent="15"/>
+		<element firePercent="20"/>
+		<element deathPercent="-5"/>
+		<element icePercent="-10"/>
+		<element holyPercent="10"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/> 
+	</immunities> 
+	<voices speed="5000" chance="10">		
+		<voice sentence="iiiiiiiihhssss!" yell="1"/>		
+		<voice sentence="Wrap wrap!" yell="1"/>		
+		<voice sentence="Burn! burn!" yell="1"/>		
+	</voices>	 
+	<loot>
+		<item id="2666" countmax="6" chance="50000"/>
+		<item id="2462" chance="300"/>
+		<item id="2148" countmax="40" chance="100000"/>
+		<item id="1987" chance="100000">
+			<inside>
+				<item id="2394" chance="5000"/>
+				<item id="2430" chance="200"/>
+				<item id="2148" countmax="5" chance="100000"/>
+			</inside>
+		</item>
+	</loot>
+</monster>

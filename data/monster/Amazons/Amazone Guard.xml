@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Guard" nameDescription="a amazone guard" race="blood" experience="200" speed="350" manacost="450">
+	<health now="750" max="750"/>
+	<look type="139" head="97" body="0" legs="19" feet="114" corpse="6081" addons="3" />
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+		<attacks>
+		<attack name="melee" interval="1500" skill="45" attack="70"/>
+	        <attack name="physical" interval="1000" chance="15" range="7" min="-5" max="-120">
+			<attribute key="shootEffect" value="throwingstar"/>
+                 </attack>
+
+	</attacks>
+	<defenses armor="16" defense="50"/>
+	<elements>
+		<element icePercent="-7"/>
+		<element firePercent="-7"/>
+		<element holyPercent="-7"/>
+		<element deathPercent="-7"/>
+		<element physicalPercent="-7"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Long live for queen!"/>
+                <voice sentence="Stand still!"/>
+		<voice sentence="Who are you!?"/>
+                <voice sentence="Leave! Now!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+            <item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2457" chance="3333"/><!-- steel helmet -->
+            <item id="2463" chance="3222"/><!-- plate armor -->
+	</loot>
+</monster>

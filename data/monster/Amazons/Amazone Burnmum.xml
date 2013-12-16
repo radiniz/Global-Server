@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Burnmum" nameDescription="a amazone burnmum" race="blood" experience="50" speed="145" manacost="450">
+	<health now="120" max="120"/>
+	<look type="137" head="115" body="59" legs="115" feet="115" corpse="6081" addons="0"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="25" attack="20"/>
+		<attack name="physical" interval="1000" chance="15" range="7" min="-5" max="-15">
+			<attribute key="shootEffect" value="smallstone"/>
+		</attack>
+	</attacks>
+	<defenses armor="12" defense="14"/>
+	<elements>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="7"/>
+		<element deathPercent="7"/>
+		<element physicalPercent="10"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="where is my baby..."/>
+		<voice sentence="Head off!"/>
+		<voice sentence="will be mine!"/>
+		<voice sentence="one more fish for me!"/>
+	</voices>
+	<loot>
+                <item id="2148" countmax="4" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="8" chance="100000"/><!-- gold coin -->
+		<item id="2467" chance="8000"/><!-- leather armor -->
+		<item id="2129" chance="2200"/><!-- crystal necklace -->
+		<item id="7457" chance="1000"/><!-- fury boots -->
+		<item id="1294" countmax="3" chance="8333"/><!-- stone -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+				<item id="2674" countmax="4" chance="10000"/><!-- red apple -->
+				<item id="2666" countmax="4" chance="20000"/><!-- meat -->
+				<item id="7618" chance="3000"/><!-- health potion -->
+			</inside>
+		</item>
+	</loot>
+</monster>

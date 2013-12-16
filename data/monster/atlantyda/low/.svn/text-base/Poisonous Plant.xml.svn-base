@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Poisonous Plant" nameDescription="a poisonous plant" race="venom" experience="40" speed="0" manacost="0">
+	<health now="120" max="120"/>
+	<look type="221" corpse="6062"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="150"/>
+	</flags>
+	<attacks>
+		<attack name="poison" interval="1000" chance="15" range="7" radius="1" target="1" min="-4" max="-9">
+			<attribute key="shootEffect" value="poison"/>
+                        </attack>
+		<attack name="poisoncondition" interval="1000" chance="25" range="5" min="-7" max="-9">
+			<attribute key="shooteffect" value="poison"/>
+            </attack>
+	</attacks>
+	<defenses armor="4" defense="4">
+		<defense name="healing" interval="1000" chance="13" min="8" max="26">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="100"/>
+		<element energyPercent="100"/>
+		<element icePercent="10"/>
+		<element firePercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+</monster>

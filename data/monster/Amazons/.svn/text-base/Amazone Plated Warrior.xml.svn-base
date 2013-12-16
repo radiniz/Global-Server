@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Plated Warrior" nameDescription="a amazone plated warrior" race="blood" experience="115" speed="160" manacost="450">
+	<health now="210" max="210"/>
+	<look type="142" head="113" body="57" legs="95" feet="113" corpse="6081" addons="1" />
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+		<attacks>
+		<attack name="melee" interval="1500" skill="45" attack="35"/>
+	</attacks>
+	<defenses armor="25" defense="25"/>
+	<elements>
+		<element icePercent="5"/>
+		<element firePercent="5"/>
+		<element holyPercent="-7"/>
+		<element deathPercent="7"/>
+		<element physicalPercent="12"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Head Off!"/>
+                <voice sentence="Stand still!"/>
+		<voice sentence="will be mine!"/>
+                <voice sentence="One more head for me! he, he..."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="45" chance="100000"/><!-- gold coin -->
+                <item id="2148" countmax="15" chance="100000"/><!-- gold coin -->
+		<item id="2464" chance="8000"/><!-- chain armor -->
+                <item id="2458" chance="7000"/><!-- chain helmet -->
+                <item id="2050" chance="5200"/><!-- torch -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+				<item id="2674" countmax="4" chance="10000"/><!-- red apple -->
+				<item id="2666" countmax="4" chance="20000"/><!-- meat -->
+				<item id="2147" countmax="2" chance="2000"/><!-- small ruby -->
+				<item id="2145" countmax="2" chance="2000"/><!-- small diamond -->
+				<item id="2200" chance="2400"/><!-- protection amulet -->
+				<item id="2463" chance="2222"/><!-- plate armor -->
+				<item id="7618" chance="3200"/><!-- health potion -->
+			</inside>
+		</item>
+	</loot>
+</monster>

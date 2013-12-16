@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazone Wild Warrior" nameDescription="a amazone wild warrior" race="blood" experience="70" speed="160" manacost="450">
+	<health now="155" max="155"/>
+	<look type="147" head="59" body="57" legs="115" feet="57" corpse="6081" addons="2" />
+	<targetchange interval="5000" chance="12"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+		<attacks>
+		<attack name="melee" interval="1500" skill="35" attack="28"/>
+	</attacks>
+	<defenses armor="20" defense="20"/>
+	<elements>
+		<element icePercent="5"/>
+		<element firePercent="5"/>
+		<element holyPercent="5"/>
+		<element deathPercent="5"/>
+		<element physicalPercent="5"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="HAHAHAHA"/>
+		<voice sentence="will be mine!"/>
+		<voice sentence="IIHHAAAA!..."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="15" chance="100000"/><!-- gold coin -->
+		<item id="2464" chance="8000"/><!-- chain armor -->
+		<item id="2378" chance="1800"/><!-- battle axe -->
+                <item id="2050" chance="5200"/><!-- torch -->
+                <item id="2227" chance="5200"/><!-- meat -->
+                <item id="2398" chance="4200"/><!-- mace -->
+		<item id="2558" chance="1000"/><!-- saw -->
+		<item id="2677" countmax="15" chance="9993"/><!-- blueberry -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+                         <item id="2666" countmax="2" chance="9993"/><!-- meat -->
+		             <item id="7618" chance="3000"/><!-- health potion -->
+			</inside>
+		</item>
+	</loot>
+</monster>

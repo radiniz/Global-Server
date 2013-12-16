@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<monster name="Plague Bug" namedescription="a plague bug" race="venom" experience="30" speed="240" manacost="250">
+	<health now="55" max="55"/>
+	<look type="348" corpse="5990"/>
+	<targetchange interval="2000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="23" attack="19"/>
+	<attack name="poisonfield" interval="800" chance="20" radius="1" target="0">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+	</attacks>
+	<defenses armor="2" defense="3"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element energyPercent="10"/>
+		<element icePercent="10"/>
+		<element physicalPercent="7"/>
+		<element firePercent="-20"/>
+	</elements>
+	<loot>
+		<item id="3976" countmax="10" chance="50000"/><!-- worm -->
+		<item id="2148" countmax="8" chance="100000"/><!-- gold coin -->
+	</loot>
+</monster>

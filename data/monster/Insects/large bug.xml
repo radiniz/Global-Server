@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Large Bug" nameDescription="a large bug" race="venom" experience="20" speed="100" manacost="0">
+	<health now="45" max="45"/>
+	<look type="284" corpse="8593"/>
+	<targetchange interval="60000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag staticattack="90"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="25" attack="18"/>
+	</attacks>
+	<defenses armor="2" defense="1"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element energyPercent="10"/>
+		<element icePercent="10"/>
+		<element physicalPercent="7"/>
+		<element firePercent="-20"/>
+	</elements>
+	<loot>
+		<item id="3976" countmax="10" chance="50000"/><!-- worm -->
+		<item id="2148" countmax="4" chance="100000"/><!-- gold coin -->
+		<item id="2679" countmax="3" chance="50000"/><!-- cherry -->
+	</loot>
+</monster>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Killer Pharaoh" nameDescription="a Killer Pharaoh" race="undead" experience="1444440" speed="470" manacost="0">
+	<health now="4000000" max="4000000"/>
+	<look type="90" corpse="6025"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="1" attack="1" poison="1"/>
+	</attacks>
+	<defenses armor="20" defense="35">
+		<defense name="healing" interval="1000" chance="17" min="100" max="200">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="invisible" interval="2000" chance="14" duration="80">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="15">
+		<summon name="Mummy" interval="2000" chance="1000"/>
+	</summons>
+	<voices interval="5000" chance="100">
+		<voice sentence="Now chhhou shhhee me ... Now chhhou don't!!"/>
+		<voice sentence="Chhhhou are marked ashhh my prey."/>
+		<voice sentence="Quantos noobs o.o...INUTEIS!!!  MUHAHAMUAHAHA."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="90" chance="500000"/><!-- gold coin -->
+		<item id="2160" countmax="30" chance="500000"/><!-- gold coin -->
+		<item id="2165" chance="500000"/><!-- stealth ring -->
+		<item id="2154" chance="500000"/><!-- yellow gem -->
+		<item id="2195" chance="150000"/><!-- boots of haste -->
+		<item id="2444" chance="100000"/><!-- hammer of wrath -->
+		<item id="2352" chance="100000"/><!-- crystal arrow -->
+		<item id="2522" chance="56000"/><!-- great shield -->
+		<item id="2495" chance="60000"/><!-- demon legs -->
+	</loot>
+</monster>

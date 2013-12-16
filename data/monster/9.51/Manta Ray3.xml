@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Manta Ray" nameDescription="manta ray" race="blood" experience="700" speed="270" manacost="0">
+  <health now="900" max="900"/>
+  <look type="449" corpse="15279"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="90" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="50" attack="70"/>	
+  </attacks>
+  <defenses armor="55" defense="55">    
+	<defenses armor="11" defense="11"/>
+	<elements>
+		<element physicalPercent="-8"/>
+		<element deathPercent="-7"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Flap flap flap!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="80" chance="23000"/><!-- gold coin -->
+	</loot>
+</monster>
