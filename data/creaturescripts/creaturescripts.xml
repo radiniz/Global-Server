@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creaturescripts>
+	<event type="login" name="PlayerLogin" script="login.lua"/>
+	<event type="logout" name="demonOakLogout" script="demonOakLogout.lua"/>
+	<event type="death" name="demonOakDeath" script="demonOakDeath.lua"/>
+	<event type="kill" name="Arena" script="Arena.lua"/>
+	<event type="kill" name="tasks" script="tasks.lua"/>
+	<event type="death" name="PythiusTheRotten" script="PythiusTheRotten.lua"/>
+	<event type="advance" name="fullmh" script="fullmh.lua"/>
+	<event type="death" name="SkullAmulet" script="preparedeath.lua"/>
+    	<event type="advance" name="LevelRecompense" script="recompenselvl.lua"/>
+	<event type="death" name="fury" script="fury.lua"/>
+	<event type="death" name="wrath" script="wrath.lua"/>
+	<event type="death" name="spite" script="spite.lua"/>
+	<event type="death" name="scorn" script="scorn.lua"/>
+	<event type="death" name="snake" script="snake.lua"/>
+	<event type="death" name="Azerus" script="Azerus.lua"/>
+	<event type="death" name="Versperoth" script="Versperoth.lua"/>
+	<event type="kill" name="ArenaKill" script="arenakill.lua"/>
+	<event type="death" name="tirecz" script="tirecz.lua"/>
+	<event type="kill" name="bosseswarzone" script="bosseswarzone.lua"/> 
+
+	<!-- Inquisition Full Quest -->
+	<event type="kill" name="inquisitionPortals" script="Inquisition.lua"/>
+</creaturescripts>
