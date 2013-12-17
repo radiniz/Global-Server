@@ -8,7 +8,6 @@
 	<event type="death" name="PythiusTheRotten" script="PythiusTheRotten.lua"/>
 	<event type="advance" name="fullmh" script="fullmh.lua"/>
 	<event type="death" name="SkullAmulet" script="preparedeath.lua"/>
-    	<event type="advance" name="LevelRecompense" script="recompenselvl.lua"/>
 	<event type="death" name="fury" script="fury.lua"/>
 	<event type="death" name="wrath" script="wrath.lua"/>
 	<event type="death" name="spite" script="spite.lua"/>
@@ -20,6 +19,6 @@
 	<event type="death" name="tirecz" script="tirecz.lua"/>
 	<event type="kill" name="bosseswarzone" script="bosseswarzone.lua"/> 
 
-	<!-- Inquisition Full Quest -->
+	<!-- Inquisition Quest -->
 	<event type="kill" name="inquisitionPortals" script="Inquisition.lua"/>
 </creaturescripts>
