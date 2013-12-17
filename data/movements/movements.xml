@@ -344,7 +344,7 @@
 	<movevent event="StepIn" actionid="9883" script="pitsofinferno/firepaladinall.lua" />
 	<movevent event="StepIn" actionid="9884" script="pitsofinferno/firesorcererall.lua" />
 	
-	
+	<!-- OAK -->
 	<movevent event="StepOut" uniqueid="32193" script="demonOakTree.lua" />
      	<movevent event="StepIn" itemid="8292" script="demonOakArea.lua" />
 
@@ -383,7 +383,7 @@
 	<movevent event="StepIn" fromaid="7841" toaid="7844" script="alters/alterstpsvar.lua" />
 	<movevent event="StepIn" fromaid="7845" toaid="7848" script="alters/alterstpyala.lua" />
 	
-		<!-- alters -->
+	<!-- alters -->
 	<movevent event="StepIn" actionid="15111" script="alters/ice.lua" />
 	<movevent event="StepIn" actionid="15112" script="alters/earth.lua" />
 	<movevent event="StepIn" actionid="15113" script="alters/energy.lua" />
