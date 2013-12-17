@@ -107,7 +107,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		if getPlayerFreeCap(cid) < getItemWeightByUID(reward.uid) then
 			result = "You have found " .. result .. " weighing " .. string.format("%.2f", getItemWeightByUID(reward.uid)) .. " oz. You have no capacity."
 		else
-			result = "You have found " .. result .. ", but you have no room to take it."
+			result = "You have found " .. result .. ", but you have no room to take it!"
 		end
 	else
 		result = "You have found " .. result .. "."
