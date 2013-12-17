@@ -22,8 +22,6 @@
 	<!-- Market -->
 	<action itemid="14405" function="market"/>
 
-	<!-- Dota -->
-	<action uniqueid="5533" script="start_dota.lua" />
 
         <!--Mounts-->
  	<action itemid="13292" script="tinlizzard.lua"/> --tin lizzard
@@ -57,6 +55,8 @@
 
 	<!-- Premium Scroll -->
 	<action itemid="16101" script="premiumscroll.lua" />
+	
+	<!-- Others Scripts -->
 	<action itemid="13670" script="belongings.lua"/>
 	<action itemid="18215" script="gnomish supply packages.lua"/>
         <action itemid="5957" script="other/loteryticket.lua"/>  
@@ -79,13 +79,6 @@
     	<action actionid="4214" script="training_room.lua" />
    	<!-- training room-doors, end -->
 
-	<!-- BigFoots -->
- 	<action uniqueid="35441" script="abyssador.lua" />
- 	<action uniqueid="35445" script="deathstrike.lua" />
- 	<action uniqueid="35443" script="gnomevil.lua" />>
-
-	<!-- Cassino System, end -->
-	<action uniqueid="6297-6300" script="cassino.lua"/>
 
 	<!-- Island of Destiny -->
 	<action uniqueid="61900" script="Island of Destiny/knight/brassarmor.lua"/>
@@ -113,19 +106,11 @@
 	<action uniqueid="4506" script="quests/doublet.lua"/>
 	<action uniqueid="4507" script="bearroom.lua"/>
 	<action uniqueid="4508" script="rats.lua"/>
-
 	<action itemid="7131" script="railbymock.lua" />
 	<action itemid="7132" script="railbymock.lua" />
-
-	<action actionid="5555" script="fut.lua"/>
-
 	<action itemid="2093" script="tools/waterpipe.lua"/>
 	<action itemid="2099" script="tools/waterpipe.lua"/>
-	
 	<action itemid="7537" script="other/spideregg.lua"/>
-
-	<action actionid="2387" script="tetris.lua"/>
-	<action itemid="9564" script="snakesys.lua"/>
 
 	<!-- unnatural selection quest -->
 	<action uniqueid="24150" script="unna/bones.lua"/>	<!-- pile of bones UID -->
@@ -138,7 +123,6 @@
 	<action itemid="7846" script="out.lua"/>
 	<action fromaid="15051" toaid="15053" script="doc.lua"/>
 	<action fromaid="15061" toaid="15063" script="doc.lua"/>
-
 	<action actionid="39550" script="bookcase.lua"/>
 	<action itemid="5938" script="hydrawater.lua"/>
 	<action itemid="10523" script="egg.lua"/>
@@ -164,15 +148,11 @@
 	<action itemid="7734" script="food.lua" />
 	<action itemid="9661" script="crate.lua" />
     	<action uniqueid="32145" script="zao/zao_arena.lua"/>
-
-
 	<action itemid="11098" script="skull.lua"/>
-
 	<action actionid="1133" script="other/rats.lua" />  
 
 	<!-- rook -->
-	 <action uniqueid="4767" script="addon.lua" />
- 
+	<action uniqueid="4767" script="addon.lua" />
 	<action actionid="60034" script="piano.lua"/> 
 	<action itemid="6087" script="piano.lua"/>
 	<action itemid="6088" script="piano.lua"/>
@@ -187,25 +167,6 @@
 	<action itemid="10515" script="tools/squeezings.lua"/>
 	<action itemid="10516" script="tools/squeezings.lua"/>
   
- 		<!-- Rozjebka-->
-	<action uniqueid="8889" script="quests/bsword.lua" />  
-	<action fromid="2376" toid="2419" script="rozjebka.lua"/>
-	<action fromid="2446" toid="2451" script="rozjebka.lua"/>
-	<action itemid="6528" script="rozjebka.lua"/>
-	<action itemid="2453" script="rozjebka.lua"/>
-	<action itemid="7456" script="rozjebka.lua"/>
-	<action fromid="7382" toid="7420" script="rozjebka.lua"/>
-	<action fromid="8930" toid="8932" script="rozjebka.lua"/>
-	<action fromid="2434" toid="2439" script="rozjebka.lua"/>
-	<action fromid="7421" toid="7432" script="rozjebka.lua"/>
-	<action fromid="8927" toid="8929" script="rozjebka.lua"/>
-	<action fromid="2425" toid="2432" script="rozjebka.lua"/>
-	<action fromid="2440" toid="2441" script="rozjebka.lua"/>
-	<action itemid="2454" script="rozjebka.lua"/>
-	<action fromid="8924" toid="8926" script="rozjebka.lua"/>
-	<action fromid="7380" toid="7381" script="rozjebka.lua"/>
-	<action fromid="7434" toid="7436" script="rozjebka.lua"/>
- 
     	<!-- Paradox Actions-->
     	<action actionid="11005" script="paradox_actions/paradox_lvl5.lua"/>
     	<action actionid="11004" script="paradox_actions/paradox_lvl4.lua"/>
