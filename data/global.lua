@@ -753,7 +753,27 @@ function doForceSummonCreature(name, pos)
 	return creature
 end
 
---
+function doCopyItem(item, attributes)
+	local attributes = attributes or false
+
+	local ret = doCreateItemEx(item.itemid, item.type)
+	if(attributes) then
+		if(item.actionid > 0) then
+			doSetItemActionId(ret, item.actionid)
+		end
+	end
+
+	if(isContainer(item.uid) == TRUE) then
+		for i = (getContainerSize(item.uid) - 1), 0, -1 do
+			local tmp = getContainerItem(item.uid, i)
+			if(tmp.itemid > 0) then
+				doAddContainerItemEx(ret, doCopyItem(tmp, true).uid)
+			end
+		end
+	end
+
+	return getThing(ret)
+end
 
 if not globalStorageTable then
 	globalStorageTable = {}
