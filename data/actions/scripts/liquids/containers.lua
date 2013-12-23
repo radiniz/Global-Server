@@ -1,155 +1,89 @@
-local ITEM_RUM_FLASK = 5553
+-- TODO: Rewrite this script using fluidtypes from LIQUIDS doc-file,
+--		and correct itemid's to recieve the liquids.
 
-local TYPE_EMPTY = 0
-local TYPE_WATER = 1
-local TYPE_BLOOD = 2
-local TYPE_BEER = 3
-local TYPE_SLIME = 4
-local TYPE_LEMONADE = 5
-local TYPE_MILK = 6
-local TYPE_MANA_FLUID = 7
-local TYPE_LIFE_FLUID = 10
-local TYPE_OIL = 11
-local TYPE_URINE = 13
-local TYPE_COCONUT_MILK = 14
-local TYPE_WINE = 15
-local TYPE_MUD = 19
-local TYPE_FRUIT_JUICE = 21
-local TYPE_LAVA = 26
-local TYPE_RUM = 27
-local TYPE_SWAMP = 28
-local TYPE_TEA = 35
+local function Eliminar()
+local piedra2 = {x = 32260, y = 32791, z = 7, stackpos = 1}
+local piedrapos = getThingfromPos(piedra2)
+	doRemoveItem(piedrapos.uid, 1)
+end
 
-local distillery = {[5513] = 5469, [5514] = 5470}
-local oilLamps = {[2046] = 2044}
-local casks = {[1771] = TYPE_WATER, [1772] = TYPE_BEER, [1773] = TYPE_WINE}
-local alcoholDrinks = {TYPE_BEER, TYPE_WINE, TYPE_RUM}
-local poisonDrinks = {TYPE_SLIME, TYPE_SWAMP}
+local function reset()
+	doTransformItem(getTileItemById({x=32940, y=31457, z=2}, 9242).uid, 9241)
+end
 
 local drunk = createConditionObject(CONDITION_DRUNK)
 setConditionParam(drunk, CONDITION_PARAM_TICKS, 60000)
 
 local poison = createConditionObject(CONDITION_POISON)
-setConditionParam(poison, CONDITION_PARAM_DELAYED, true) -- Condition will delay the first damage from when it's added
-setConditionParam(poison, CONDITION_PARAM_MINVALUE, -50) -- Minimum damage the condition can do at total
-setConditionParam(poison, CONDITION_PARAM_MAXVALUE, -120) -- Maximum damage
-setConditionParam(poison, CONDITION_PARAM_STARTVALUE, -5) -- The damage the condition will do on the first hit
-setConditionParam(poison, CONDITION_PARAM_TICKINTERVAL, 4000) -- Delay between damages
-setConditionParam(poison, CONDITION_PARAM_FORCEUPDATE, true) -- Re-update condition when adding it(ie. min/max value)
+addDamageCondition(poison, 2, 6000, -5)
+addDamageCondition(poison, 3, 6000, -4)
+addDamageCondition(poison, 5, 6000, -3)
+addDamageCondition(poison, 10, 6000, -2)
+addDamageCondition(poison, 20, 6000, -1)
 
-local burn = createConditionObject(CONDITION_FIRE)
-setConditionParam(burn, CONDITION_PARAM_DELAYED, true) -- Condition will delay the first damage from when it's added
-setConditionParam(burn, CONDITION_PARAM_MINVALUE, -70) -- Minimum damage the condition can do at total
-setConditionParam(burn, CONDITION_PARAM_MAXVALUE, -150) -- Maximum damage
-setConditionParam(burn, CONDITION_PARAM_STARTVALUE, -10) -- The damage the condition will do on the first hit
-setConditionParam(burn, CONDITION_PARAM_TICKINTERVAL, 10000) -- Delay between damages
-setConditionParam(burn, CONDITION_PARAM_FORCEUPDATE, true) -- Re-update condition when adding it(ie. min/max value)
-
+local fluidType = {3, 4, 5, 7, 10, 11, 13, 15, 19}
+local fluidMessage = {"Aah...", "Urgh!", "Mmmh.", "Aaaah...", "Aaaah...", "Urgh!", "Urgh!", "Aah...", "Urgh!"}
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-	if(isPlayer(itemEx.uid)) then
-		if(item.type == TYPE_EMPTY) then
+	if itemEx.itemid == 1 then
+		if item.type == 0 then
 			doPlayerSendCancel(cid, "It is empty.")
-			return true
+		elseif itemEx.uid == cid then
+			doChangeTypeItem(item.uid, 0)
+			if item.type == 3 or item.type == 15 then
+				doTargetCombatCondition(0, cid, drunk, CONST_ME_NONE)
+			elseif item.type == 4 then
+				doTargetCombatCondition(0, cid, poison, CONST_ME_NONE)
+			elseif item.type == 7 then
+				doPlayerAddMana(cid, math.random(50, 150))
+				doSendMagicEffect(fromPosition, CONST_ME_MAGIC_BLUE)
+			elseif item.type == 10 then
+				doCreatureAddHealth(cid, 60)
+				doSendMagicEffect(fromPosition, CONST_ME_MAGIC_BLUE)
+			end
+			for i = 0, #fluidType do
+				if item.type == fluidType[i] then
+					doCreatureSay(cid, fluidMessage[i], TALKTYPE_ORANGE_1)
+					return TRUE
+				end
+			end
+			doCreatureSay(cid, "Gulp.", TALKTYPE_ORANGE_1)
+		else
+			local splash = doCreateItem(2025, item.type, toPosition)
+			doChangeTypeItem(item.uid, 0)
+			doDecayItem(splash)
 		end
-
-		if(item.type == TYPE_MANA_FLUID) then
-			if(not doPlayerAddMana(itemEx.uid, math.random(80, 160))) then
-				return false
+	else
+		local fluidSource = getFluidSourceType(itemEx.itemid)
+		if fluidSource ~= 0 then
+			doChangeTypeItem(item.uid, fluidSource)
+		elseif item.type == 0 then
+			doPlayerSendCancel(cid, "It is empty.")
+		else
+			if toPosition.x == CONTAINER_POSITION then
+				toPosition = getCreaturePosition(cid)
 			end
-
-			doCreatureSay(itemEx.uid, "Aaaah...", TALKTYPE_MONSTER)
-			doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
-		elseif(item.type == TYPE_LIFE_FLUID) then
-			if(not doCreatureAddHealth(itemEx.uid, math.random(40, 75))) then
-				return false
-			end
-
-			doCreatureSay(itemEx.uid, "Aaaah...", TALKTYPE_MONSTER)
-			doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
-		elseif(itemEx.uid == cid) then
-			if(isInArray(alcoholDrinks, item.type)) then
-				if(not doTargetCombatCondition(0, cid, drunk, CONST_ME_NONE)) then
-					return false
-				end
-
-				doCreatureSay(cid, "Aaah...", TALKTYPE_MONSTER)
-			elseif(isInArray(poisonDrinks, item.type)) then
-				if(not doTargetCombatCondition(0, cid, poison, CONST_ME_NONE)) then
-					return false
-				end
-
-				doCreatureSay(cid, "Urgh!", TALKTYPE_MONSTER)
-			elseif(item.type == TYPE_LAVA) then
-				if(not doTargetCombatCondition(0, cid, burn, CONST_ME_NONE)) then
-					return false
-				end
-
-				doCreatureSay(cid, "Urgh!", TALKTYPE_MONSTER)
+			splash = doCreateItem(2025, item.type, toPosition)
+			doChangeTypeItem(item.uid, 0)
+			doDecayItem(splash)
+		end
+	end
+local piedra = {x = 32260, y = 32791, z = 7}
+		if (item.itemid == 2006 and itemEx.actionid == 18899) then
+		if getPlayerStorageValue(cid, 100078) == 14 then
+			if fromPosition.x == CONTAINER_POSITION then
+				doSendMagicEffect(toPosition, CONST_ME_HOLYAREA)
+				doSummonCreature("Pirate Ghost", { x =32257, y =32791, z =7})
+				doCreatureSay(cid, "Thud!", TALKTYPE_ORANGE_1, nil, nil, {x=32260, y=32791, z=7})
+				setPlayerStorageValue(cid, 100078, 15)
+				doPlayerRemoveItem(cid, 2006, 1)
+				doCreateItem(8696, 1, piedra)
+				addEvent(Eliminar, 20*1000)
 			else
-				doCreatureSay(cid, "Gulp.", TALKTYPE_MONSTER)
+				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You need hold the item on you.")
 			end
 		else
-			doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
-			return true
-		end
-
-		doChangeTypeItem(item.uid, TYPE_EMPTY)
-		return true
-	end
-
-	if(not isCreature(itemEx.uid)) then
-		if(item.type == TYPE_EMPTY) then
-			if(item.itemid == ITEM_RUM_FLASK) then
-				local tmp = distillery[itemEx.itemid]
-				if(tmp ~= nil) then
-					doTransformItem(itemEx.uid, tmp)
-					doChangeTypeItem(item.uid, TYPE_RUM)
-				else
-					doPlayerSendCancel(cid, "You have to process the bunch into the distillery to get rum.")
-				end
-
-				return true
-			end
-
-			if(isItemFluidContainer(itemEx.itemid) and itemEx.type ~= TYPE_EMPTY) then
-				doChangeTypeItem(item.uid, itemEx.type)
-				doChangeTypeItem(itemEx.uid, TYPE_EMPTY)
-				return true
-			end
-
-			local tmp = casks[itemEx.itemid]
-			if(tmp == nil) then
-				tmp = getFluidSourceType(itemEx.itemid)
-			end
-
-			if(tmp) then
-				doChangeTypeItem(item.uid, tmp)
-				return true
-			end
-
-			doPlayerSendCancel(cid, "It is empty.")
-			return true
-		end
-
-		local tmp = oilLamps[itemEx.itemid]
-		if(item.type == TYPE_OIL and tmp ~= nil) then
-			doTransformItem(itemEx.uid, tmp)
-			doChangeTypeItem(item.uid, TYPE_NONE)
-			return true
-		end
-
-		if(isItemFluidContainer(itemEx.itemid) and itemEx.type == TYPE_EMPTY) then
-			doChangeTypeItem(itemEx.uid, itemEx.type)
-			doChangeTypeItem(item.uid, TYPE_EMPTY)
-			return true
-		end
-
-		if(hasProperty(itemEx.uid, CONST_PROP_BLOCKSOLID)) then
-			return false
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You arent a inquisition member")
 		end
 	end
-
-	doDecayItem(doCreateItem(POOL, item.type, toPosition))
-	doChangeTypeItem(item.uid, TYPE_EMPTY)
-	return true
+	return TRUE
 end
