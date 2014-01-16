@@ -3,7 +3,7 @@
 	<globalevent name="record" type="record" event="script" value="record.lua"/>
 	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
 	<globalevent name="raids" interval="1" event="script" value="raid.lua"/>
-
+	<globalevent name="shop" interval="30000" script="shop.lua"/> 
 </globalevents>
 
 
