@@ -427,16 +427,6 @@
 	<action itemid="8868" script="foods/food.lua"/>
 	<action itemid="9005" script="foods/food.lua"/>
 	<action itemid="10454" script="foods/food.lua"/>
-	<action itemid="9992" script="foods/rotworm_stew.lua"/>
-	<action itemid="9993" script="foods/hydra_tongue_salad.lua"/>
-	<action itemid="9994" script="foods/roasted_dragon_wings.lua"/>
-	<action itemid="9995" script="foods/fried_tropical_terrorbird.lua"/>
-	<action itemid="9996" script="foods/food.lua"/>
-	<action itemid="9997" script="foods/veggie_casserole.lua"/>
-	<action itemid="9998" script="foods/filled_jalapeno_peppers.lua"/>
-	<action itemid="9999" script="foods/blessed_steak.lua"/>
-	<action itemid="10000" script="foods/carrot_cake.lua"/>
-	<action itemid="10001" script="foods/northern_fishburger.lua"/>
 
 
 	<!-- Increase/Decrease ItemId -->
