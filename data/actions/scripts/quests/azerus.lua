@@ -24,6 +24,21 @@ function mapArea(fromPos, toPos, stack)
         end 
 end 
 
+local function doClearArea(fromPos, toPos)
+	if(getGlobalStorageValue(982) == 1) then
+		for x = fromPos.x, toPos.x do
+			for y = fromPos.y, toPos.y do
+				if(getThingfromPos({x = x, y = y, z = 10, stackpos = 255}).uid > 0) then
+					if(isMonster(getThingfromPos({x = x, y = y, z = 10, stackpos = 255}).uid)) then
+						doRemoveCreature(getThingfromPos({x = x, y = y, z = 10, stackpos = 255}).uid)
+					end
+				end
+			end
+		end
+		setGlobalStorageValue(982, 0)
+	end
+	return true
+end
 
 function getMonstersfromArea(fromPos, toPos) 
         local monsters = {}     
@@ -56,6 +71,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		doForceSummonCreature("Rift Worm", {x=glo.x,y=glo.y - 4,z=glo.z}) 
 		doForceSummonCreature("Rift Worm", {x=glo.x,y=glo.y + 5,z=glo.z}) 
 		doForceSummonCreature("Azerus", {x=glo.x,y=glo.y - 5,z=glo.z}) 
+		setGlobalStorageValue(982, 1)
 	end 
 	local function FifthWave() 
 		doForceSummonCreature("Rift Worm", {x= glo.x - 4,y=glo.y,z=glo.z}) 
@@ -179,6 +195,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		addEvent(createWall, 300*1000, p)
 		i = {wallid = getwall1.itemid}
 		addEvent(createWalll, 300*1000, i)
+		addEvent(doClearArea, 5 * 1000 * 60, {x = 32776, y = 31157, z = 10}, {x = 32790, y = 31175, z = 10})
 	end
 	
 	if item.actionid == 58263 then 
