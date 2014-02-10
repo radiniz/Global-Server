@@ -18,6 +18,7 @@
 	<event type="kill" name="ArenaKill" script="arenakill.lua"/>
 	<event type="death" name="tirecz" script="tirecz.lua"/>
 	<event type="kill" name="bosseswarzone" script="bosseswarzone.lua"/> 
+	<event type="login" name="FirstItems" script="firstitems.lua"/>
 
 	<!-- Inquisition Quest -->
 	<event type="kill" name="inquisitionPortals" script="Inquisition.lua"/>
