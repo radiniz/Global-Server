@@ -1,5 +1,4 @@
 local config = {
-	hardcoreManaSpent = getConfigValue("addManaSpentInPvPZone"),
 	manaCost = 300,
 	soulCost = 2,
 }
@@ -68,10 +67,11 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 
 		doPlayerAddMana(cid, -mana)
 		doPlayerAddSoul(cid, -soul)
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_RED)
 
 		doTransformItem(item.uid, enchantedGems[a])
-		if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana) and (not getTileInfo(getThingPosition(cid)).hardcore or config.hardcoreManaSpent)) then
-			doPlayerAddSpentMana(cid, mana)
+		if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana)) then
+			doPlayerAddManaSpent(cid, mana)
 		end
 
 		doSendMagicEffect(fromPosition, CONST_ME_HOLYDAMAGE)
