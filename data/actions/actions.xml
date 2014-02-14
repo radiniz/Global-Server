@@ -56,6 +56,16 @@
 	<!-- Premium Scroll -->
 	<action itemid="16101" script="premiumscroll.lua" />
 	
+	<!-- Weapons enchanting (Gems) -->
+	<action itemid="2146" script="other/enchanting.lua"/>
+	<action itemid="2147" script="other/enchanting.lua"/>
+	<action itemid="2150" script="other/enchanting.lua"/>
+	<action itemid="2149" script="other/enchanting.lua"/>
+	<action itemid="7759" script="other/enchanting.lua"/>
+	<action itemid="7760" script="other/enchanting.lua"/>
+	<action itemid="7761" script="other/enchanting.lua"/>
+	<action itemid="7762" script="other/enchanting.lua"/>
+	
 	<!-- Others Scripts -->
 	<action itemid="13670" script="belongings.lua"/>
 	<action itemid="18215" script="gnomish supply packages.lua"/>
